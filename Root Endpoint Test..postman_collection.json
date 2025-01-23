@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "8b396339-6e99-4093-93b0-d0887316f504",
+		"name": "Root Endpoint Test.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33384480",
+		"_collection_link": "https://www.postman.com/adi-raj007/workspace/testing-phase/collection/33384480-8b396339-6e99-4093-93b0-d0887316f504?action=share&source=collection_link&creator=33384480"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:5000",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:5000"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1efd977f-5750-4fc0-b7b6-3c3cd1116caf"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:5000/upload"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/train",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://127.0.0.1:5000/train"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/predict",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Temperature\": 75,\n    \"Run_Time\": 150\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/predict"
+			},
+			"response": []
+		}
+	]
+}
